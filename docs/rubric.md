@@ -123,7 +123,9 @@ Things to keep in mind:
 Things to keep in mind:
 
 + You can create a mock string containing the playlist name and tracks to test your code.
+
 + If you’ve set up your static components with the proper representation for the core components of the interface, you can pass the playlist tracks from the component responsible for the Playlist to the component responsible for the Tracklist.
+
 + Consider using state to store information such as the playlist name and playlist tracks.
 
 
