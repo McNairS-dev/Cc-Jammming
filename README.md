@@ -1,4 +1,4 @@
-#Jammming
+# Jammming
 
 Here begins the README... it is highly <code>wip</code> and to be updated as the project progresses.
 
@@ -13,7 +13,7 @@ The project is an exercise in use of ReactJS. It is part of Codecdaemy's front-e
 Completion of the project requires knowledge of passing state in a React app, and use of API requests with the Spotify API to build access data from a remote data source. The Jammming app allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
 </details>
 
-##Project Requirements
+## Project Requirements
 <details>
 <summary>
 As set by Codecademy
@@ -35,7 +35,7 @@ As set by Codecademy
 
 
 
-##Features:
+## Features:
 <details>
 <summary>
 Features of the Jammming app include:
