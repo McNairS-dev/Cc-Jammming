@@ -1,5 +1,9 @@
 import './App.css'
 import Hero from './components/Hero/Hero'
+import SearchForm from './components/SearchForm/SearchForm'
+import SearchResults from './components/SearchResults/SearchResults'
+import PlaylistForm from './components/PlaylistForm/PlaylistForm'
+import Playlist from './components/Playlist/Playlist'
 
 function App() {
 //  const [count, setCount] = useState(0)
