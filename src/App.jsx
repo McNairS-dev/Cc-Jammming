@@ -12,24 +12,30 @@ function App() {
     <>
       <h1>Jammming</h1>
         <section id="hero">
+          <h3>Hero Section</h3>
           <Hero />
-          <p>Hero Component</p>
         </section>
-        <section id="search-header">
-          <SearchForm />
-          <p>SearchForm Component</p>
+        <section id="search">
+          <h3>Search Section</h3>
+          <section id="search-form">
+            <h4>SearchForm Component</h4>
+            <SearchForm />
+          </section>
+          <section id="search-results">
+            <h4>SearchResults Component</h4>
+            <SearchResults />
+          </section>
         </section>
-        <section id="search-results">
-          <SearchResults />
-          <p>SearchResults Component</p>
-        </section>
-        <section id="playlist-header">
-          <PlaylistForm />
-          <p>PlaylistForm Component</p>
-        </section>
-        <section id="playlist-tracks">
-          <Playlist />
-          <p>Playlist Component</p>
+        <section id="playlist">
+          <h3>Playlist Section</h3>
+          <section id="playlist-form">
+            <h4>PlaylistForm Component</h4>
+            <PlaylistForm />
+          </section>
+          <section id="playlist-tracks">
+            <h4>Playlist Component</h4>
+            <Playlist />
+          </section>
         </section>
     </>
   )
