@@ -1,0 +1,53 @@
+/* Resets  */
+* {
+  font-family: sans;
+  box-sizing: border-box;
+/*
+ To redline - full
+  border: 1px solid red;
+  margin: 5px; 
+*/
+}
+
+html {
+  max-width: 960px;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+main {
+  display: grid;
+  /* 2 equal width columns */
+  grid-template-columns: 1fr 1fr;
+  /* 3 rows, 3rd row expands to accommodate more p'Playlist track' or 'SearchResult track' */
+  grid-template-rows: 100px 200px auto;
+}
+
+/* top-level placement */
+#hero {
+  grid-column: 1;
+  grid-row: 1;
+  }
+
+#search-form {
+  grid-column: 1;
+  grid-row: 2;
+  }
+  
+#search-result-tracks {
+  grid-column: 1;
+  grid-row: 3
+}
+
+#playlist-form {
+  grid-column: 2;
+  grid-row: 1 / 2;
+}
+
+#playlist-tracks {
+  grid-column: 2;
+  grid-row: 3;
+}

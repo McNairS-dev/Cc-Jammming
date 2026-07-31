@@ -1,0 +1,78 @@
+* {
+  font-family: sans;
+
+}
+body {
+  max-width: 900px;
+}
+/* desktop default */
+main {
+  display: grid;
+  border: 1px solid red;
+  margin: 5px; 
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-template-rows: 100px 200px auto;
+  grid-template-areas:
+    "hero      playlist"
+    "search    playlist";
+}
+
+/* top-level placement */
+#hero { grid-area: hero; }
+#search { grid-area: search; }
+#playlist { grid-area: playlist; }
+
+/* desktop: put form/results in two columns inside their sections */
+#hero {
+  border: 1px solid red;
+  margin: 5px; 
+  display: grid;
+}
+
+#search {
+  display: grid;
+  border: 1px solid red;
+  margin: 5px; 
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "search-heading"
+    "search-form"
+    "search-results";
+}
+
+#search h3 {
+  grid-area: "search-heading";
+}
+
+
+#search-form {
+
+  grid-area: search-form;
+}
+
+#search-results {
+  grid-area: search-results;
+}
+
+#playlist {
+  display: grid;
+  border: 1px solid red;
+  margin: 5px; 
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "playlist-heading"
+    "playlist-form"
+    "playlist-tracks";
+}
+
+#playlist h3 {
+  grid-area: "playlist-heading";
+}
+
+#playlist-form {
+  grid-area: playlist-form;
+}
+
+#playlist-tracks {
+  grid-area: playlist-tracks;
+}
