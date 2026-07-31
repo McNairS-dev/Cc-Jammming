@@ -9,4 +9,11 @@ describe('Jammming web app', () => {
 
     expect(screen.getByText('Jammming')).toBeInTheDocument()
   })
+  
+   it('renders the App component with Hero component', () => {
+    render(<App />)
+
+    expect(screen.getByText('Welcome to the Wonderful World of Jammming')).toBeInTheDocument()
+   expect(screen.getByText('Enter a song, album, or artist name and press "Search" to start your jamm!')).toBeInTheDocument()
+  })
 })
