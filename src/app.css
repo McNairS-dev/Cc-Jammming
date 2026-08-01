@@ -1,3 +1,9 @@
+/* 
+    This file is a sandpit & reference point for creating the actual ReactJS app
+    As such it is to be considered part of the documentation (commit -m 'docs: ... '
+      and not part of the app code    
+                                    */
+
 /* Resets  */
 * {
   font-family: sans;
@@ -14,7 +20,7 @@ html {
   margin: auto;
 }
 
-label {
+label, button {
   display: block;
 }
 

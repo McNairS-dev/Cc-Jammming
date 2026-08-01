@@ -3,6 +3,12 @@
   <head>
     <link rel="stylesheet" href="app.css" />
   </head>
+
+<!-- 
+    This file is a sandpit & reference point for creating the actual ReactJS app
+    As such it is to be considered part of the documentation (commit -m 'docs: ... '
+      and not part of the app code    
+                                    -->
   <body>
     <header>
       <h1>Jammming</h1>
@@ -19,6 +25,7 @@
           <form>
             <label for="search-name">Search for... (required):</label>
             <input type="text" name="search-name" id="search-name" required />
+            <button type="submit">Search</button>
           </form>
         </section>
 
@@ -51,6 +58,7 @@
             <input type="text" name="playlist-name" id="playlist-name" required />
             <label for="playlist-descritption">Playlist Descritption (optional):</label>
             <textarea name="playlist-descritption" id="playlist-descritption">You can add a description here... </textarea>
+            <button type="submit">Save to Spotify</button>            
           </form>
         </section>
           
