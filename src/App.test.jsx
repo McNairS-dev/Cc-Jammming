@@ -23,4 +23,13 @@ describe('Jammming web app', () => {
     expect(screen.getByText('Search for... (required):')).toBeInTheDocument()
     expect(screen.getByText('Search')).toBeInTheDocument()
   })
+  
+    
+  it('renders the App component with Playlist Form Component', () => {
+    render(<App/>)
+    
+    expect(screen.getByText('Playlist Name... (required):')).toBeInTheDocument()
+    expect(screen.getByText('Playlist Description... (optional):')).toBeInTheDocument()
+    expect(screen.getByText('Save to Spotify')).toBeInTheDocument()
+  })
 })
