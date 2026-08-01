@@ -14,6 +14,13 @@ describe('Jammming web app', () => {
     render(<App />)
 
     expect(screen.getByText('Welcome to the Wonderful World of Jammming')).toBeInTheDocument()
-   expect(screen.getByText('Enter a song, album, or artist name and press "Search" to start your jamm!')).toBeInTheDocument()
+    expect(screen.getByText('Enter a song, album, or artist name and press "Search" to start your jamm!')).toBeInTheDocument()
+  })
+  
+  it('renders the App component with SearchBar Component', () => {
+    render(<App/>)
+    
+    expect(screen.getByText('Search for... (required):')).toBeInTheDocument()
+    expect(screen.getByText('Search')).toBeInTheDocument()
   })
 })
