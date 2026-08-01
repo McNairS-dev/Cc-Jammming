@@ -1,0 +1,100 @@
+{
+  {
+  "artist": "The Doors" {
+    "album": "Strange Days" {
+      "tracks": [
+        {
+          "name": "Strange Days",
+          "length": 3:05
+        },
+        {
+          "name": "You're Lost Little Girl",
+          "length":	3:01
+        },
+        {
+          "name": "Love Me Two Times",
+          "length":	3:23
+        },
+        {
+          "name": "Unhappy Girl",
+          "length":	2:00
+        },
+        {
+          "name": "Horse Latitudes",
+          "length":	1:30
+        },
+        {
+          "name": "Moonlight Drive",
+          "length":	3:00
+        },
+        {
+          "name": "People Are Strange",
+          "length":	2:10
+        },
+        {
+          "name": "My Eyes Have Seen You",
+          "length":	2:22
+        },
+        {
+          "name": "I Can't See Your Face in My Mind",
+          "length":	3:18
+        },
+        {
+          "name": "When the Music's Over",
+          "length":	11:00
+        }
+      ],
+      "total-length": 34:49
+    }
+  }
+  },
+  {
+    "artist": "Bonobo", {
+      "album": "Animal Magic" {
+      "tracks": [
+        {
+      "name": "Intro",
+      "length":	0:43
+    },
+        {
+      "name": "Sleepy Seven",
+      "length":	5:19
+    },
+        {
+      "name": "Dinosaurs",
+      "length":	3:57
+    },
+        {
+    "name": "Kota",
+    "length":	5:41
+    },
+        {
+      "name": "Terrapin",
+      "length":	4:36
+    },
+        {
+      "name": "The Plug",
+      "length":	5:15
+    },
+        {
+      "name": "Shadowtricks",
+      "length":	4:06
+    },
+        {
+      "name": "Gypsy",
+      "length":	3:35
+    },
+        {
+      "name": "Sugar Rhyme",
+      "length":	4:44
+    },
+        {
+      "name": "Silver",
+      "length":	6:36
+    }
+      ],
+      "total-length":	44:31
+    }
+  }
+}
+}
