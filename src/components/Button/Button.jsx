@@ -1,9 +1,9 @@
 // src/components/Button/Button.jsx
 
-function Button(){
+function Button(props){
   return (
     <>
-      <button type="submit">Search for...</button>
+      <button type="submit"> {props.buttonText} </button>
     </>
   
   )}

@@ -1,5 +1,8 @@
 // src/components/Track/Track.jsx
 
-function Track() {return <li>Teardrop, Massive Attack, Mezzanine</li>}
+function Track( props ) {
+  return (
+    <li> { props.trackData }</li>
+    )}
 
 export default Track
