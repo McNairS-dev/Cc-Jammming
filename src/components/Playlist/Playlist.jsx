@@ -1,7 +1,10 @@
 // src/components/Playlist/Playlist.jsx
 
+import Tracklist from '../Tracklist/Tracklist'
 
-const trackData = 
+function Playlist() {
+
+const DATA = 
 [
   {
     id:     "d003",
@@ -23,10 +26,10 @@ const trackData =
   }
 ]
 
-function Playlist( {trackData} ) {
   return (
   <>
-    <Tracklist { trackData = { trackData } } /}
+    <h3>Playlist</h3>
+    <Tracklist tracks = { DATA } />
   </>
   )
 }
