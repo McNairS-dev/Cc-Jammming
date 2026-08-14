@@ -2,7 +2,11 @@
 
 function Track( props ) {
   return (
-    <li> { props.trackData }</li>
+    <li>
+      <p>Song: {props.song}</p>
+      <p>Artist: {props.artist}</p>
+      <p>Album: {props.album}</p>
+    </li>
     )}
 
 export default Track
