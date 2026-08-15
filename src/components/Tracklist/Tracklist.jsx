@@ -1,13 +1,22 @@
 // src/components/Tracklist/Tracklist.jsx
 
 import Track from '../Track/Track'
+
 function Tracklist( props ) {
+  
+const trackList = props.tracks?.map((track) => (
+  <Track 
+    key     = { track.id }
+    song    = { track.song }
+    artist  = { track.artist }
+    album   = { track.album }
+    buttonType = {props.buttonType}
+    />
+));
   return (
     <>
       <ul>
-        <Track trackData='Teardrop, Massive Attack, Mezzanine' />
-        <Track trackData='Girlfriend Is Better, Talking Heads, Speaking in Tongues' />
-        <Track trackData="Feet Don't Fail Me Now, JoyCrookes, Skin" />
+        {trackList}
       </ul>
     </>
   )}

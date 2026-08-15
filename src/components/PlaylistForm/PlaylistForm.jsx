@@ -1,7 +1,8 @@
-function PlaylistForm() {
+function PlaylistForm({id}) {
   return (
   <>
-    <form>
+    <h3>Playlist Details</h3>
+    <form id={id}>
       <label htmlFor="playlist-name">Playlist Name... (required):</label>
       <input type="text" name="playlist-name" id="playlist-name" required />
       <label htmlFor="playlist-descritption">Playlist Description... (optional):</label>

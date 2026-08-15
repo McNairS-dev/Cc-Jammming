@@ -2,10 +2,11 @@
 
 import Tracklist from '../Tracklist/Tracklist'
 
-function Playlist() {
-
+function Playlist( props) {
+  
 const DATA = 
 [
+
   {
     id:     "d003",
     song:   'Half Life',
@@ -28,8 +29,10 @@ const DATA =
 
   return (
   <>
-    <h3>Playlist</h3>
-    <Tracklist tracks = { DATA } />
+    <div id={props.id}>
+      <h3>Playlist</h3>
+      <Tracklist  buttonType = "-" tracks = { DATA } />
+    </div>
   </>
   )
 }
