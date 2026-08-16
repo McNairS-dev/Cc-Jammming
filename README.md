@@ -1,14 +1,12 @@
 # Jammming
 
-Here begins the README... it is highly <code>wip</code> and to be updated as the project progresses.
-
-Note:  to view full details in each section click the down pointing arrows
+To view full details in each section click the right pointing arrows
 <details>
   <summary>
-    Jammm(sic)ing is a minimal Spotify client
+    Jammm(sic)ing allows the user to search Spotify for music tracks and add them to a playlist. Tracks can also be removed from the playlist. The playlist is given a name (required, editable) and optionally a description (editable). The playlist can be saved to Spotify once completed.
   </summary>
 
-The project is an exercise in use of ReactJS. It is part of Codecdaemy's front-end web development offering. Codecademy's Full-stack Engineer career path is a requirement of the Web Development Engineer Traineeship offered by 'IT Career Switch'.
+This exercise in the use of ReactJS is part of Codecdaemy's front-end web development offering. Codecademy's Full-stack Engineer career path is a requirement of the Web Development Engineer Traineeship offered by 'IT Career Switch'.
 
 Completion of the project requires knowledge of passing state in a React app, and use of API requests with the Spotify API to build access data from a remote data source. The Jammming app allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
 </details>
@@ -16,7 +14,7 @@ Completion of the project requires knowledge of passing state in a React app, an
 ## Project Requirements
 <details>
 <summary>
-As set by Codecademy
+As set by Codecademy (edited)
 </summary>
 
 +   Build a web app using React
@@ -27,13 +25,23 @@ As set by Codecademy
     +    The purpose of your project
     +    Technologies used
     +    Features
-    +    Future work - possibilities include:
-        + Drag & drop from the search results to the playlist
-        + Keyboard navigation to assist non-mouse users
-        + Search by attributes other than track name such as artist’s name, album name, or genre
+    +    Future possibilities (see below)
 </details>
 
+## Technologies used
+<details>
+<summary>
+Jammming uses the following front-end web development, project set up, and version control technologies and tools:</summary>
 
++ Vite
++ Vitest
++ git
++ HTML
++ CSS
++ JavaScript
++ API access
++ ReactJS
+</details>
 
 ## Features:
 <details>
@@ -42,31 +50,20 @@ Features of the Jammming app include:
 </summary>
 
 +   Users can search for songs by song title.
-    +   You can also include functionality to 
 +   Users can see information about each song like title, artist, and album for songs they queried
-    +   You can also include other information – the design is up to you
 +   Users can export their custom playlist to their personal Spotify account
 </details>
 
-### React + Vite
+## Possibilities for future work include:
 <details>
 <summary>
-
-The app was created with Vite. The original 'Vite + React' README follows
+Codecademy have suggestions, see below.<br>a11y as Jammming Part II.<br>
+The rest later maybe?
 </summary>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
++ Drag & drop from the search results to the playlist  
++ Keyboard navigation to assist non-mouse users <span style="color: red;">DO THIS!!!</span>
++ Search by attributes other than track name such as artist’s name, album name, or genre
++ Integrate a11y into the UI (what we'll actually be doing, added by Sam) <span style="color: red;">DO THIS!!!</span>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-#### React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-#### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 </details>
