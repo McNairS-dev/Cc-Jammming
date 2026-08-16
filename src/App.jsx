@@ -7,6 +7,51 @@ import Playlist from './components/Playlist/Playlist'
 import './App.css'
 
 function App() {
+  const PLAYLIST_DATA = 
+[
+
+  {
+    id:     "d003",
+    song:   'Half Life',
+    artist: 'Sneaker Pimps',
+    album:  'Splinter'
+  },
+  {
+    id:     "e004",
+    song:   "It Could Be Sweet",
+    artist: "Portishead",
+    album:  "Dummy"
+  },
+  {
+    id:     "f005",
+    song:   'Underwater',
+    artist: 'Elizabeth Frazer',
+    album:  "Sun's Signature" 
+  }
+]
+
+const SEARCH_DATA = 
+[  
+  {
+    id:     "a000",
+    song:   'Teardrop',
+    artist: 'Massive Attack',
+    album:  'Mezzanine'
+  },
+  {
+    id:     "b001",
+    song:   "Girlfriend Is Better",
+    artist: "Talking Heads",
+    album:  "Speaking in Tongues"
+  },
+  {
+    id:     "c002",
+    song:   "Feet Don't Fail Me Now",
+    artist: "Joy Crookes",
+    album:  "Skin" 
+  }
+]
+
   return (
     <>
       <header>
@@ -15,9 +60,9 @@ function App() {
       <main>
         <Hero id="hero" />
         <SearchBar id="search-bar" />
-        <SearchResults id="search-result-tracks" />
+        <SearchResults id="search-result-tracks" SEARCH_DATA = { SEARCH_DATA } />
         <PlaylistForm id="playlist-form" />
-        <Playlist id="playlist-tracks" />
+        <Playlist id="playlist-tracks" PLAYLIST_DATA =  { PLAYLIST_DATA } />
       </main>
       <footer></footer>
     </>
