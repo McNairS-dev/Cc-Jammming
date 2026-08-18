@@ -1,7 +1,7 @@
 # Jammming - a (minimal) Spotify Client Project 
 ## User Stories
 ### Search
-	... for tracks by name
+	(for tracks by name)
 As a user I can
 + request a list of song tracks
 + view a list of tracks that meet the search criterion
