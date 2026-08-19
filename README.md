@@ -67,3 +67,52 @@ The rest later maybe?
 + Integrate a11y into the UI (what we'll actually be doing, added by Sam) <span style="color: red;">DO THIS!!!</span>
 
 </details>
+
+## Practices, Protocols, & Habits
+<detail>
+<summary>
+Here you will find the things that make the process work
+</summary>
+### Practices
+TDD is a practice
+
+Write a Next Commit Msg \[NCM] before starting work ('habit'?)
+
+(or are these 'habits'?)
+Always do
+    $ git branch
+    $ git status
+before starting work
+    OK, I know git status tells you which branch you're on but git branch means I actually *look* at what branch I'm on
+### Protocols
+Naming branches - we don't have references so '<type>/<name>' not /<type>/<refernce>/<name>'
+### Habits
+Daily or per-session actions that
+* prevent 'accidents' and cat's-arse-trophies e.g. 'unitentional' deletions
+* ease the work-flow e.g. ?
+</detail>
+
+## Resources
+<details>
+<summary>
+These are the tutorials, cheat sheets and other resources that have informed the development process.<br>
+Note: this section is w-i-p. Resources will be added (new) as I come across them and as I come back to them (previous)
+</summary>
+
+### TDD
+### Naming things
+See also conventional commits bookmarks
+and this
+https://medium.com/@abhay.pixolo/commit-messages-in-git-everything-you-need-to-know-your-cheatsheet-e056a03466cc
+
+https://dev.to/couchcamote/git-branching-name-convention-cch
+https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534
+https://www.brazenbraden.com/posts/git_conventions/
+https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4
+### React
+In general
+    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Frameworks_libraries#react_tutorials
+React specifically
+    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Frameworks_libraries#react_tutorials
+### Git
+</details>
