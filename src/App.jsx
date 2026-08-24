@@ -6,6 +6,8 @@ import Playlist from './components/Playlist/Playlist'
 
 import './App.css'
 
+import { useState } from 'react'
+
 function App() {
   const PLAYLIST_DATA = 
 [
@@ -52,6 +54,12 @@ const SEARCH_DATA =
   }
 ]
 
+const [playlistName, setPlaylistName] = useState('Playlist');
+
+function updatePlaylist(playlistName) {
+  alert(playlistName);
+}
+
   return (
     <>
       <header>
@@ -61,7 +69,10 @@ const SEARCH_DATA =
         <Hero id="hero" />
         <SearchBar id="search-bar" />
         <SearchResults id="search-result-tracks" SEARCH_DATA = { SEARCH_DATA } />
-        <PlaylistForm id="playlist-form" />
+        <PlaylistForm 
+          updatePlaylist={ updatePlaylist } 
+          id={"playlist-form"}
+          playlistName={ playlistName } />
         <Playlist id="playlist-tracks" PLAYLIST_DATA =  { PLAYLIST_DATA } />
       </main>
       <footer></footer>
