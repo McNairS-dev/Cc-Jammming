@@ -55,9 +55,11 @@ const SEARCH_DATA =
 ]
 
 const [playlistName, setPlaylistName] = useState('Playlist');
+const [playlistDescription, setPlaylistDescription] = useState('Oh, what a lovely Playlist!');
 
-function updatePlaylist(playlistName) {
+function updatePlaylist(playlistName, playlistDescription) {
   alert(playlistName);
+  alert(playlistDescription);
 }
 
   return (
@@ -72,7 +74,9 @@ function updatePlaylist(playlistName) {
         <PlaylistForm 
           updatePlaylist={ updatePlaylist } 
           id={"playlist-form"}
-          playlistName={ playlistName } />
+          playlistName={ playlistName }
+          playlistDescription={ playlistDescription }
+           />
         <Playlist id="playlist-tracks" PLAYLIST_DATA =  { PLAYLIST_DATA } />
       </main>
       <footer></footer>

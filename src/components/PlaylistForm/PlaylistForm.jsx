@@ -4,16 +4,22 @@ import { useState } from 'react'
 function PlaylistForm(props) {
 
   const [playlistName, setPlaylistName] = useState(props.playlistName);
+  const [playlistDescription, setPlaylistDescription] = useState(props.playlistDescription);
   
   function handleSubmit(e) {
     e.preventDefault();
-    props.updatePlaylist(playlistName);
-    setPlaylistName('');
+    props.updatePlaylist(playlistName, playlistDescription);
   }
 
-  function handleChange(e) {
+  function handleRenamePlaylist(e) {
     e.preventDefault();
     setPlaylistName(e.target.value);
+  }
+  
+function handleChangePlaylistDescription(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+    setPlaylistDescription(e.target.value);
   }
 
   return (
@@ -28,10 +34,16 @@ function PlaylistForm(props) {
         name="playlist-name" 
         id="playlist-name" 
         value={ playlistName }
-        onChange={ handleChange }
+        onChange={ handleRenamePlaylist }
         required />
       <label htmlFor="playlist-description">Playlist Description... (optional):</label>
-      <textarea name="playlist-description" id="playlist-description"></textarea>
+      <textarea 
+        name="playlist-description" 
+        id="playlist-description"
+        value={ playlistDescription }
+        onChange={ handleChangePlaylistDescription }
+        >
+      </textarea>
       <button type="submit">Save to Spotify</button>            
     </form>
   </>
