@@ -9,29 +9,32 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-  const PLAYLIST_DATA = 
-[
-
+  const PLAYLIST_DATA = {
+  playlistName: 'Playlist',
+  playlistDescription: 'Oh, what a lovely Playlist!',
+  
+  trackData: [ 
+  
   {
     id:     "d003",
     song:   'Half Life',
     artist: 'Sneaker Pimps',
     album:  'Splinter'
-  },
-  {
-    id:     "e004",
-    song:   "It Could Be Sweet",
-    artist: "Portishead",
-    album:  "Dummy"
-  },
-  {
-    id:     "f005",
-    song:   'Underwater',
-    artist: 'Elizabeth Frazer',
-    album:  "Sun's Signature" 
-  }
-]
-
+    },
+    {
+      id:     "e004",
+      song:   "It Could Be Sweet",
+      artist: "Portishead",
+      album:  "Dummy"
+    },
+    {
+      id:     "f005",
+      song:   'Underwater',
+      artist: 'Elizabeth Frazer',
+      album:  "Sun's Signature" 
+    }
+  ]
+}
 const SEARCH_DATA = 
 [  
   {
@@ -54,12 +57,16 @@ const SEARCH_DATA =
   }
 ]
 
-const [playlistName, setPlaylistName] = useState('Playlist');
-const [playlistDescription, setPlaylistDescription] = useState('Oh, what a lovely Playlist!');
+const [playlistName, setPlaylistName] = useState(PLAYLIST_DATA.playlistName);
+const [playlistDescription, setPlaylistDescription] = useState(PLAYLIST_DATA.playlistDescription);
+const [playlistTracks, setPlaylistTracks] = useState();
 
 function updatePlaylist(playlistName, playlistDescription) {
-  alert(playlistName);
-  alert(playlistDescription);
+  PLAYLIST_DATA.playlistName = playlistName;
+  PLAYLIST_DATA.playlistDescription = playlistDescription;
+  //alert(playlistName);
+  //alert(playlistDescription);
+  //console.log(PLAYLIST_DATA);
 }
 
   return (
@@ -77,7 +84,10 @@ function updatePlaylist(playlistName, playlistDescription) {
           playlistName={ playlistName }
           playlistDescription={ playlistDescription }
            />
-        <Playlist id="playlist-tracks" PLAYLIST_DATA =  { PLAYLIST_DATA } />
+        <Playlist
+          id="playlist-tracks"
+          PLAYLIST_DATA =  { PLAYLIST_DATA.trackData } 
+        />
       </main>
       <footer></footer>
     </>
