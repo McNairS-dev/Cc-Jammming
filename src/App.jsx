@@ -64,9 +64,12 @@ const [playlistTracks, setPlaylistTracks] = useState();
 function updatePlaylist(playlistName, playlistDescription) {
   PLAYLIST_DATA.playlistName = playlistName;
   PLAYLIST_DATA.playlistDescription = playlistDescription;
-  //alert(playlistName);
-  //alert(playlistDescription);
-  //console.log(PLAYLIST_DATA);
+}
+
+function addRemoveTrack (track) {
+  console.log(track.id);
+  console.log(track.song);
+  console.log(track.buttonType);
 }
 
   return (
@@ -77,7 +80,11 @@ function updatePlaylist(playlistName, playlistDescription) {
       <main>
         <Hero id="hero" />
         <SearchBar id="search-bar" />
-        <SearchResults id="search-result-tracks" SEARCH_DATA = { SEARCH_DATA } />
+        <SearchResults
+          id="search-result-tracks"
+          SEARCH_DATA = { SEARCH_DATA }
+          addRemoveTrack = { addRemoveTrack }
+        />
         <PlaylistForm 
           updatePlaylist={ updatePlaylist } 
           id={"playlist-form"}
@@ -86,7 +93,8 @@ function updatePlaylist(playlistName, playlistDescription) {
            />
         <Playlist
           id="playlist-tracks"
-          PLAYLIST_DATA =  { PLAYLIST_DATA.trackData } 
+          PLAYLIST_DATA={ PLAYLIST_DATA.trackData }
+          addRemoveTrack={ addRemoveTrack }
         />
       </main>
       <footer></footer>

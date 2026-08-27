@@ -9,7 +9,11 @@ function SearchResults( props ) {
   <>
     <div id={props.id}>
       <h3>Search Results</h3>
-      <Tracklist buttonType = "+" tracks = { props. SEARCH_DATA } />
+      <Tracklist
+        buttonType = "+"
+        tracks = { props. SEARCH_DATA }
+        addRemoveTrack = { props.addRemoveTrack }
+      />
     </div>
   </>
   )

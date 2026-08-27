@@ -9,7 +9,11 @@ function Playlist( props ) {
   <>
     <div id={props.id}>
       <h3>Playlist</h3>
-      <Tracklist  buttonType = "-" tracks = { props.PLAYLIST_DATA } />
+      <Tracklist
+        buttonType = "-"
+        tracks = { props.PLAYLIST_DATA }
+        addRemoveTrack={ props.addRemoveTrack }
+      />
     </div>
   </>
   )
