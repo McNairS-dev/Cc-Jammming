@@ -2,9 +2,8 @@
 
 import Tracklist from '../Tracklist/Tracklist'
 
-function Playlist( props ) {
-  
-console.log(props.PLAYLIST_DATA);
+function Playlist( props ) {  
+
   return (
   <>
     <div id={props.id}>
@@ -12,7 +11,7 @@ console.log(props.PLAYLIST_DATA);
       <Tracklist
         buttonType = "-"
         tracks = { props.PLAYLIST_DATA }
-        addRemoveTrack={ props.addRemoveTrack }
+        addRemoveTrack = { props.addRemoveTrack }
       />
     </div>
   </>
