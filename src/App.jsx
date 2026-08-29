@@ -70,14 +70,25 @@ function updatePlaylist(playlistName, playlistDescription) {
 }
 
 function addRemoveTrack (id, buttonType) {
+  if (buttonType === '+') {
+    const trackToAdd = searchResultsTracks.find((track) => track.id === id);
+    setPlaylistTracks([...playlistTracks, trackToAdd]);
   
-  const trackToAdd = searchResultsTracks.find((track) => track.id === id);
-  setPlaylistTracks([...playlistTracks, trackToAdd]);
+    const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
+    setSearchResultsTracks(remainingTracks);
+  } else { 
   
-  const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
-  setSearchResultsTracks(remainingTracks);
+  if (buttonType === '-') {
+    const trackToAdd = playlistTracks.find((track) => track.id === id);
+    setSearchResultsTracks([...searchResultsTracks, trackToAdd]);
+  
+    const remainingTracks = playlistTracks.filter((trackToRemove) => id !== trackToRemove.id);
+    setPlaylistTracks(remainingTracks);
+  } else {
+      alert('Sorry, Bud. No can do');
+  }
+  }
 }
-
   return (
     <>
       <header>
@@ -93,7 +104,7 @@ function addRemoveTrack (id, buttonType) {
         />
         <PlaylistForm 
           updatePlaylist={ updatePlaylist } 
-          id={"playlist-form"}
+          id="playlist-form"
           playlistName={ playlistName }
           playlistDescription={ playlistDescription }
            />
