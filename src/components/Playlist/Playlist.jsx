@@ -4,7 +4,7 @@ import Tracklist from '../Tracklist/Tracklist'
 
 function Playlist( props ) {
   
-
+console.log(props.PLAYLIST_DATA);
   return (
   <>
     <div id={props.id}>

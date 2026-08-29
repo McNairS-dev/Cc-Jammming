@@ -4,15 +4,20 @@ function Track( props ) {
 
 function handleClick (e) {
   e.preventDefault();
-  // alert('You clicked me here!');
+  //alert('You clicked me here!');
   //console.log(typeof props.addRemoveTrack);
   //console.log( props.addRemoveTrack);
   //props.addRemoveTrack('You clicked me down there!');
   const track = {
     id: props.id,
+    song: props.song,
     buttonType: props.buttonType
   }
-  props.addRemoveTrack(track);
+  //props.addRemoveTrack(track);
+  props.addRemoveTrack(props.id, props.buttonType);
+    //id: props.id,
+    //song: props.song,
+    //buttonType: props.buttonType
 }
 
   return (

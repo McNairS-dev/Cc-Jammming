@@ -59,17 +59,37 @@ const SEARCH_DATA =
 
 const [playlistName, setPlaylistName] = useState(PLAYLIST_DATA.playlistName);
 const [playlistDescription, setPlaylistDescription] = useState(PLAYLIST_DATA.playlistDescription);
-const [playlistTracks, setPlaylistTracks] = useState();
+//const [playlistTracks, setPlaylistTracks] = useState();
+const [playlistTracks, setPlaylistTracks] = useState(PLAYLIST_DATA.trackData);
+const [searchResultsTracks, setSearchResultsTracks] = useState(SEARCH_DATA);
+//console.log(searchResultsTracks);
 
 function updatePlaylist(playlistName, playlistDescription) {
   PLAYLIST_DATA.playlistName = playlistName;
   PLAYLIST_DATA.playlistDescription = playlistDescription;
 }
-
-function addRemoveTrack (track) {
-  console.log(track.id);
-  console.log(track.song);
-  console.log(track.buttonType);
+//function addRemoveTrack (track) {
+function addRemoveTrack (id, buttonType) {
+  //console.log(track.id);
+  //console.log(track.song);
+  //console.log(track.buttonType);
+  //console.log(id);
+  //console.log(buttonType);
+      //const trackToAdd = searchResultsTracks.find(track =>{
+      console.log(id);
+      
+      const trackToAdd = searchResultsTracks.find((track) => track.id === id);
+      console.log(trackToAdd);
+      console.log(playlistTracks);
+      setPlaylistTracks([...playlistTracks, trackToAdd]);
+      console.log(playlistTracks);
+      //console.log(track.id);
+      //console.log(track);
+      //track.id
+    const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
+    
+    console.log(remainingTracks);
+    setSearchResultsTracks(remainingTracks);
 }
 
   return (
@@ -82,7 +102,7 @@ function addRemoveTrack (track) {
         <SearchBar id="search-bar" />
         <SearchResults
           id="search-result-tracks"
-          SEARCH_DATA = { SEARCH_DATA }
+          SEARCH_DATA = { searchResultsTracks }
           addRemoveTrack = { addRemoveTrack }
         />
         <PlaylistForm 
@@ -93,7 +113,7 @@ function addRemoveTrack (track) {
            />
         <Playlist
           id="playlist-tracks"
-          PLAYLIST_DATA={ PLAYLIST_DATA.trackData }
+          PLAYLIST_DATA={ playlistTracks }
           addRemoveTrack={ addRemoveTrack }
         />
       </main>
