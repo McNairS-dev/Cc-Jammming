@@ -68,28 +68,14 @@ function updatePlaylist(playlistName, playlistDescription) {
   PLAYLIST_DATA.playlistName = playlistName;
   PLAYLIST_DATA.playlistDescription = playlistDescription;
 }
-//function addRemoveTrack (track) {
+
 function addRemoveTrack (id, buttonType) {
-  //console.log(track.id);
-  //console.log(track.song);
-  //console.log(track.buttonType);
-  //console.log(id);
-  //console.log(buttonType);
-      //const trackToAdd = searchResultsTracks.find(track =>{
-      console.log(id);
-      
-      const trackToAdd = searchResultsTracks.find((track) => track.id === id);
-      console.log(trackToAdd);
-      console.log(playlistTracks);
-      setPlaylistTracks([...playlistTracks, trackToAdd]);
-      console.log(playlistTracks);
-      //console.log(track.id);
-      //console.log(track);
-      //track.id
-    const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
-    
-    console.log(remainingTracks);
-    setSearchResultsTracks(remainingTracks);
+  
+  const trackToAdd = searchResultsTracks.find((track) => track.id === id);
+  setPlaylistTracks([...playlistTracks, trackToAdd]);
+  
+  const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
+  setSearchResultsTracks(remainingTracks);
 }
 
   return (
