@@ -59,16 +59,36 @@ const SEARCH_DATA =
 
 const [playlistName, setPlaylistName] = useState(PLAYLIST_DATA.playlistName);
 const [playlistDescription, setPlaylistDescription] = useState(PLAYLIST_DATA.playlistDescription);
-const [playlistTracks, setPlaylistTracks] = useState();
+//const [playlistTracks, setPlaylistTracks] = useState();
+const [playlistTracks, setPlaylistTracks] = useState(PLAYLIST_DATA.trackData);
+const [searchResultsTracks, setSearchResultsTracks] = useState(SEARCH_DATA);
+//console.log(searchResultsTracks);
 
 function updatePlaylist(playlistName, playlistDescription) {
   PLAYLIST_DATA.playlistName = playlistName;
   PLAYLIST_DATA.playlistDescription = playlistDescription;
-  //alert(playlistName);
-  //alert(playlistDescription);
-  //console.log(PLAYLIST_DATA);
 }
 
+function addRemoveTrack (id, buttonType) {
+  if (buttonType === '+') {
+    const trackToAdd = searchResultsTracks.find((track) => track.id === id);
+    setPlaylistTracks([...playlistTracks, trackToAdd]);
+  
+    const remainingTracks = searchResultsTracks.filter((trackToRemove) => id !== trackToRemove.id);
+    setSearchResultsTracks(remainingTracks);
+  } else { 
+  
+  if (buttonType === '-') {
+    const trackToAdd = playlistTracks.find((track) => track.id === id);
+    setSearchResultsTracks([...searchResultsTracks, trackToAdd]);
+  
+    const remainingTracks = playlistTracks.filter((trackToRemove) => id !== trackToRemove.id);
+    setPlaylistTracks(remainingTracks);
+  } else {
+      alert('Sorry, Bud. No can do');
+  }
+  }
+}
   return (
     <>
       <header>
@@ -77,16 +97,21 @@ function updatePlaylist(playlistName, playlistDescription) {
       <main>
         <Hero id="hero" />
         <SearchBar id="search-bar" />
-        <SearchResults id="search-result-tracks" SEARCH_DATA = { SEARCH_DATA } />
+        <SearchResults
+          id="search-result-tracks"
+          SEARCH_DATA = { searchResultsTracks }
+          addRemoveTrack = { addRemoveTrack }
+        />
         <PlaylistForm 
           updatePlaylist={ updatePlaylist } 
-          id={"playlist-form"}
+          id="playlist-form"
           playlistName={ playlistName }
           playlistDescription={ playlistDescription }
            />
         <Playlist
           id="playlist-tracks"
-          PLAYLIST_DATA =  { PLAYLIST_DATA.trackData } 
+          PLAYLIST_DATA={ playlistTracks }
+          addRemoveTrack={ addRemoveTrack }
         />
       </main>
       <footer></footer>
